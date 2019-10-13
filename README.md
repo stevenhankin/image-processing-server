@@ -3,6 +3,7 @@
 This project runs as a Node-Express application in AWS to provide a
 filtered download of requested images: http://udaimagefilter.eu-west-2.elasticbeanstalk.com/filteredimage?image_url=https://timedotcom.files.wordpress.com/2019/03/kitten-report.jpg
 
+![Elastic Beanstalk Dashboard](https://github.com/stevenhankin/image-processing-server/blob/development/deployment_screenshots/Screenshot-Elastic-Beanstalk-Dashboard.png)
 
 ## Development
 
