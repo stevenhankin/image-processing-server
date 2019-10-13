@@ -4,9 +4,7 @@ This project runs as a Node-Express application in AWS to provide a
 filtered download of requested images: http://udaimagefilter.eu-west-2.elasticbeanstalk.com/filteredimage?image_url=https://timedotcom.files.wordpress.com/2019/03/kitten-report.jpg
 
 
-## Tasks
-
-### Development
+## Development
 
 You'll need to create a new node server. Open a new terminal within the project directory and run:
 
@@ -16,7 +14,7 @@ You'll need to create a new node server. Open a new terminal within the project 
 
 Changes are made to *development* branch and then merged back into *master*
 
-### Deployment
+## Deployment
 
 A production build is created under folder /www and this is configured
 in `.elasticbeanstalk/config.yml` under the `deploy.artifact` property
@@ -27,7 +25,7 @@ npm run build
 eb deploy
 ```
 
-## Additional
+## Additions
 
 I've introduced some extra features into this project
 
