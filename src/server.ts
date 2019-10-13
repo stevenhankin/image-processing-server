@@ -58,12 +58,12 @@ import { isWebUri } from 'valid-url';
      * for usage in res.download()
      */
     try {
-      const { filePath, fileName } = await filterImageFromURL(image_url);
-      res.download(filePath + fileName, fileName, err => {
+      const localFile: string  = await filterImageFromURL(image_url);
+      res.sendFile(localFile, err => {
         if (err) {
-          console.error('Failed to complete download of file', { filePath, fileName })
+          console.error('Failed to complete download of file', { localFile })
         }
-        deleteLocalFiles([filePath + fileName])
+        deleteLocalFiles([localFile])
       })
     } catch (e) {
       console.log('ERROR', e)
