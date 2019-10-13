@@ -3,10 +3,12 @@ import bodyParser from 'body-parser';
 import { filterImageFromURL, deleteLocalFiles } from './util/util';
 import { isWebUri } from 'valid-url';
 
+let app;
+
 (async () => {
 
   // Init the Express application
-  const app = express();
+  app = express();
 
   // Set the network port
   const port = process.env.PORT || 8082;
@@ -85,3 +87,5 @@ import { isWebUri } from 'valid-url';
     console.log(`press CTRL+C to stop server`);
   });
 })();
+
+export default app;

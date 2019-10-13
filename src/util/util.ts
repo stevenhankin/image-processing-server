@@ -1,5 +1,5 @@
 import fs from 'fs';
-import Jimp = require('jimp');
+import Jimp from 'jimp';
 import { reject } from 'bluebird';
 
 
@@ -20,9 +20,9 @@ export async function filterImageFromURL(inputURL: string): Promise<string> {
             return reject('Unable to download as image');
         }
 
-        const outpath = __dirname + '/tmp/'
-        const outfile = 'filtered.' + Math.floor(Math.random() * 2000) + '.jpg';
-        const localFile = outpath + outfile;
+        const outpath: string = __dirname + '/tmp/'
+        const outfile: string = 'filtered.' + Math.floor(Math.random() * 2000) + '.jpg';
+        const localFile: string = outpath + outfile;
 
         try {
             await photo
